@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  logo_url: MyString
+  company_name: MyString
+  hompage_url: MyString
+  established_at: 2013-12-11
+  number_of_members: 1
+  twitter_id: MyString
+  slideshare_url: MyString
+  vine_url: MyString
+  cover_image_url: MyString
+
+two:
+  logo_url: MyString
+  company_name: MyString
+  hompage_url: MyString
+  established_at: 2013-12-11
+  number_of_members: 1
+  twitter_id: MyString
+  slideshare_url: MyString
+  vine_url: MyString
+  cover_image_url: MyString
