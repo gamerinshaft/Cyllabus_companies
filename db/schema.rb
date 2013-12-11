@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20131211171515) do
 
   create_table "companies", :force => true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20131211171515) do
     t.string   "youtube_url"
     t.string   "logo_image"
     t.string   "cover_image"
+
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
