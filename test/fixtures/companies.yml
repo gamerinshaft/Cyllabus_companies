@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_name: MyString
+  homepage_url: MyString
+  established_at: 2013-12-12
+  number_of_members: 1
+  mail: MyString
+  twitter: MyString
+  slideshare_url: MyString
+  vine_url: MyString
+  youtube_url: MyString
+
+two:
+  company_name: MyString
+  homepage_url: MyString
+  established_at: 2013-12-12
+  number_of_members: 1
+  mail: MyString
+  twitter: MyString
+  slideshare_url: MyString
+  vine_url: MyString
+  youtube_url: MyString
