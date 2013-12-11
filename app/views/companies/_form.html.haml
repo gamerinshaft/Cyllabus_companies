@@ -7,6 +7,12 @@
           %li= msg
 
   .field
+    = f.label :logo_image
+    = f.file_field :logo_image
+  .field
+    = f.label :cover_image
+    = f.file_field :cover_image
+  .field
     = f.label :company_name
     = f.text_field :company_name
   .field
