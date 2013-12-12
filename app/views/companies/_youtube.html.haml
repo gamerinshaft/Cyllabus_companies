@@ -1,6 +1,6 @@
 %object{height: "270", width: "420"}
-  %param{name: "movie", value: "http://www.youtube.com/v/#{@youtube_id}&hl=ja&fs=1&color1=0xE1600F&color2=0xFEBD01&border=1&rel=0&showinfo=1&iv_load_policy=1&disablekb=0&loop=0&autoplay=0"}/
+  %param{name: "movie", value: "http://www.youtube.com/v/#{@company.youtube_url}&hl=ja&fs=1&color1=0xE1600F&color2=0xFEBD01&border=1&rel=0&showinfo=1&iv_load_policy=1&disablekb=0&loop=0&autoplay=0"}/
   %param{name: "allowFullScreen", value: "true"}/
-  %embed{allowfullscreen: "true", height: "270", src: "http://www.youtube.com/v/#{@youtube_id}&hl=ja&fs=1&color1=0xE1600F&color2=0xFEBD01&border=1&rel=0&showinfo=1&iv_load_policy=1&disablekb=0&loop=0&autoplay=0", type: "application/x-shockwave-flash", width: "420"}
+  %embed{allowfullscreen: "true", height: "270", src: "http://www.youtube.com/v/#{@company.youtube_url}&hl=ja&fs=1&color1=0xE1600F&color2=0xFEBD01&border=1&rel=0&showinfo=1&iv_load_policy=1&disablekb=0&loop=0&autoplay=0", type: "application/x-shockwave-flash", width: "420"}
 = succeed "\u{3067}\u{8868}\u{793a}" do
-  %a{href: "http://jp.youtube.com/watch?v=#{@youtube_id}", target: "_blank"} YouTube
+  %a{href: "http://jp.youtube.com/watch?v=#{@company.youtube_url}", target: "_blank"} YouTube
