@@ -14,8 +14,9 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
-
+    @vine_id = @company.vine_url
     @youtube_id = @company.youtube_url
+    @slideshare_id = @company.slideshare_url
 
     respond_to do |format|
       format.html # show.html.erb
