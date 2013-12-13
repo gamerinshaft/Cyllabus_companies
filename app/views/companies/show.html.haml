@@ -6,7 +6,7 @@
 = render 'homepage'
 = image_tag @company.cover_image.to_s
 = image_tag @company.logo_image.to_s
-
+= gmaps4rails(@json)
 %p
   %b Company name:
   = @company.company_name
