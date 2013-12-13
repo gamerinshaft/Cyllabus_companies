@@ -8,7 +8,7 @@ gem 'rails', '3.2.14'
 gem 'sqlite3'
 gem 'haml-rails'
 gem 'carrierwave'
-gem 'gmaps4rails'
+gem 'gmaps4rails', '~> 1.4.8'
 
 # Gems used only for assets and not required
 # in production environments by default.
