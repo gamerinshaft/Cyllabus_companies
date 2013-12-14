@@ -10,7 +10,7 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'gmaps4rails', '~> 1.4.8'
 gem 'font-awesome-rails', '~> 3.2.1' 
-gem 'bootstrap-sass', '~> 3.0.1'
+gem 'bootstrap-sass', '~> 2.3.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
