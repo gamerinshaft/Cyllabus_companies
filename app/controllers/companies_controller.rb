@@ -14,7 +14,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
-    @json = Company.all.to_gmaps4rails
+    @json = @company.to_gmaps4rails
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @company }
