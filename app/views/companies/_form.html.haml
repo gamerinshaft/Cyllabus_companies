@@ -7,7 +7,7 @@
           %li= msg
   .field
     = f.label :address
-    = f.text_field :address
+    = f.text_field :address, placeholder: '東京都渋谷神泉町8-16'
   .field
     = f.label :logo_image
     = f.file_field :logo_image
@@ -16,13 +16,13 @@
     = f.file_field :cover_image
   .field
     = f.label :company_name
-    = f.text_field :company_name
+    = f.text_field :company_name, placeholder: '株式会社ダラフ'
   .field
     = f.label :phone
-    = f.phone_field :phone
+    = f.phone_field :phone, placeholder: '090-5796-0675'
   .field
     = f.label :homepage_url
-    = f.text_field :homepage_url
+    = f.text_field :homepage_url, placeholder: 'daraf.co.jp'
   .field
     = f.label :established_at
     = f.date_select :established_at
@@ -31,18 +31,18 @@
     = f.number_field :number_of_members
   .field
     = f.label :mail
-    = f.email_field :mail
+    = f.email_field :mail, placeholder: 'example@gmail.com'
   .field
     = f.label :twitter
-    = f.text_field :twitter
+    = f.text_field :twitter, placeholder: 'pipet_sc'
   .field
     = f.label :slideshare_url
-    = f.text_field :slideshare_url
+    = f.text_field :slideshare_url, placeholder: '12345678'
   .field
     = f.label :vine_url
-    = f.text_field :vine_url
+    = f.text_field :vine_url, placeholder: 'https://vine.co/v/a1b2c3d4f5'
   .field
     = f.label :youtube_url
-    = f.text_field :youtube_url
+    = f.text_field :youtube_url, placeholder: 'ZFFEA-5XxuE'
   .actions
     = f.submit 'Save'
