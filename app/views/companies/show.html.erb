@@ -4,10 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>シラバス</title>
 <link href="fav.png" rel="shortcut icon">
-<link rel="stylesheet"  href="bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
-<link rel="stylesheet"  href="style.css">
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -27,7 +23,7 @@
         <%= image_tag "cy_logo.png"%>
         </a>
         <span class="summary">
-          <a href=""><i class="icon-building"></i>企業一覧</a>
+          <a href="/companies"><i class="icon-building"></i>企業一覧</a>
           <a href=""><i class="icon-list"></i>シラバス一覧</a>
           <a href="<%= @company.id %>/edit"><i class="icon-pencil"></i>編集する</a>
         </span>
@@ -54,7 +50,7 @@
         <div class="company-name">
           <div class="logo">
 
-            <%= image_tag "logo.png"%>
+            <%= image_tag @company.logo_image.to_s %>
           </div>
           <div class="name">
             <p class="bold"><%= @company.company_name %></p>
@@ -81,14 +77,12 @@
           <a href="https://facebook.com/cyllabus" data-placement="top" data-toggle="tooltip" rel="tooltip" data-original-title="/cyllabus" id="contact-tool" target="_blank">
             <%= image_tag "facebook.png" %>
           </a>
-          <a href="http://twitter.com/cyllabus_jp" data-placement="top" data-toggle="tooltip" rel="tooltip" data-original-title="@cyllabus_jp" id="contact-tool" target="_blank">
-            <%= image_tag "twitter.png" %>
-          </a>
+          <%= render "twitter" %>
         </div>
         <div class="clear"></div>
       </div>
       <div class="office-image">
-        <%= image_tag "img.png" %>
+        <%= image_tag @company.cover_image.to_s %>
 
       </div>
       <div class="row">
@@ -257,7 +251,8 @@
               <h4>事業内容</h4>
             </div>
             <div align="center" class="slideshare">
-              <iframe src="http://www.slideshare.net/slideshow/embed_code/28733415" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/HitoshiSaiwaki/slideshare-28733415" title="ダラフ社 事業紹介(シラバス用)" target="_blank">ダラフ社 事業紹介(シラバス用)</a> </strong> from <strong><a href="http://www.slideshare.net/HitoshiSaiwaki" target="_blank">Hitoshi Saiwaki</a></strong> </div>
+              <%= render "slideshare" %>
+
             </div>
           </div>
 
@@ -266,9 +261,10 @@
               <h4>勤務地</h4>
             </div>
             <p class="address">
-              東京都渋谷区神泉町8-16 渋谷ファーストプレイス8F VOYAGE GROUP BOAT内
+              <%= @company.address %>
             </p>
-            <iframe width="650" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=q&amp;source=s_q&amp;hl=ja&amp;geocode=&amp;q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E6%B3%89%E7%94%BA8-16+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9&amp;aq=&amp;sll=36.008413,139.863965&amp;sspn=0.357708,0.565796&amp;brcurrent=3,0x60188caaa05e0abb:0x4b06bcd762a65612,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E6%B3%89%E7%94%BA%EF%BC%98%E2%88%92%EF%BC%91%EF%BC%96+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9&amp;t=m&amp;z=14&amp;ll=35.655262,139.69373&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.jp/maps?f=q&amp;source=embed&amp;hl=ja&amp;geocode=&amp;q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E6%B3%89%E7%94%BA8-16+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9&amp;aq=&amp;sll=36.008413,139.863965&amp;sspn=0.357708,0.565796&amp;brcurrent=3,0x60188caaa05e0abb:0x4b06bcd762a65612,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E7%A5%9E%E6%B3%89%E7%94%BA%EF%BC%98%E2%88%92%EF%BC%91%EF%BC%96+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9&amp;t=m&amp;z=14&amp;ll=35.655262,139.69373" style="color:#0000FF;text-align:left" class="bigmap">大きな地図で見る</a></small>
+            <%= gmaps4rails(@json) %>
+
           </div>
         </div>
         <div class="span3">
@@ -277,7 +273,7 @@
               <h4>Vine</h4>
             </div>
             <div class="vine-content" align="center">
-              <iframe class="vine-embed" src="https://vine.co/v/hF3WE2uqTXK/embed/simple" width="210" height="210" frameborder="0"></iframe><script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+              <%= render "vine" %>
             </div>
           </div>
           <div class="facebook-album">
@@ -637,10 +633,5 @@
   <div class="modal-footer">
   </div>
 </div>
-<script type="text/javascript" charset="utf-8" src="bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
-<script type="text/javascript">
-  $('a[rel=tooltip]').tooltip()
-</script>
 </body>
 </html>
