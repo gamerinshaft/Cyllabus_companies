@@ -12,7 +12,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :youtube_url
       t.string :logo_image
       t.string :cover_image
-
+      t.string :phone
       t.timestamps
     end
   end

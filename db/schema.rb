@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20131213211849) do
     t.string   "youtube_url"
     t.string   "logo_image"
     t.string   "cover_image"
+    t.string   "phone"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.float    "latitude"

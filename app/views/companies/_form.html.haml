@@ -18,6 +18,9 @@
     = f.label :company_name
     = f.text_field :company_name
   .field
+    = f.label :phone
+    = f.phone_field :phone
+  .field
     = f.label :homepage_url
     = f.text_field :homepage_url
   .field
@@ -28,7 +31,7 @@
     = f.number_field :number_of_members
   .field
     = f.label :mail
-    = f.text_field :mail
+    = f.email_field :mail
   .field
     = f.label :twitter
     = f.text_field :twitter
